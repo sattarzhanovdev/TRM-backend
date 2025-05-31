@@ -7,6 +7,7 @@ def is_string(value):
     return isinstance(value, str)
 
 
+
 class WorkerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Worker

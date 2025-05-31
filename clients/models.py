@@ -14,6 +14,7 @@ class Client(models.Model):
     id = models.AutoField(primary_key=True)
     full_name = models.CharField(max_length=255)
     phone_number = models.CharField(max_length=20)
-    appointed_worker = models.CharField(max_length=255)
+    appointed_worker = models.ForeignKey(Worker, on_delete=models.SET_NULL, null=True, blank=True)
     payment = models.CharField(max_length=50)
     status = models.CharField(max_length=50, default="Не оплачено")
+
